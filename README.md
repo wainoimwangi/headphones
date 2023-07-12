@@ -22,7 +22,7 @@ The web page includes the following features:
 To run the web page project locally, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/wainoimwangi/headphones.git`
-2. Open the '4-index.html' '3-index.html' '2-index.html' '1-index.html' '0-index.html' file in a web browser.
+2. Open the `4-index.html` `3-index.html` `2-index.html` `1-index.html` `0-index.html` file in a web browser.
 
 ## Usage
 
