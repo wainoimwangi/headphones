@@ -1,161 +1,240 @@
 @import url("https://www.fontsquirrel.com/fonts/source-sans-pro#link");
 @import url("https://www.fontsquirrel.com/fonts/Spin-Cycle-OT#link");
 
+/* VARIABLES */
+:root {
+--color-primary: #FF6565;
+--color-black:  #000;
+--color-white: #ffffff;
+--color-grey: #979797;
+--color-light-grey: #d8d8d8;
+--color-dark-grey: #353535;
+--color-navy-blue: #071629;
+--Radial-gradient1: #29303D00, #071629;
+--Radial-gradient2: #10192978, #071629;
+--background: #FFF;
+--font-family: Source Sans Pro;
+--font-size: 12px;
+--font-style: normal;
+--font-weight: 700;
+--line-height: normal;
+}
+/* BASE */
+
+
 /* Set the flex container */
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 1400px;
-    height: 3006px;
+    padding: 0;
     margin: 0;
-    padding-left: 200.61px;
-    padding-right: 199px;
-    padding-top: 27.76px;
-    padding-bottom: 2946px;
-  }
-  
+}
   /* Style the header */
-  header {
-    border: 1px solid black;
+.header {
     height: 32px;
     display: flex;
     justify-content: space-between;
-    margin: 0;
     align-items: center;
-    background-color: #333;
-    color: #fff;
-  }
-  .header {
-    width: 1000.392px;
-    height: 32px;
-  }
-  
-  .header-logo img {
-    width: 161px;
-    height: 32px;
-  }
-  
-  .nav {
+    color: var(--color-white);
+    z-index: 1000;
+    position: relative;
+    padding-left: 201px;
+    padding-right: 199px;
+    padding-top: 27.8px;
+}
+.navbar-menu {
     display: inline-flex;
     height: 15px;
     justify-content: center;
     align-items: flex-start;
     gap: 41px;
     flex-shrink: 0;
-  }
-  
-  .nav-item {
-    color: #FFF;
-    font-family: Source Sans Pro;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  
-  .nav-link {
-    color: #fff;
+}
+.navbar-menu a {
     text-decoration: none;
-  }
-  
-  /* Style the main content */
-  main {
-    margin: 0;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 2206px;
+    color: var(--color-white);
+    font-family: var(--font-family);
+    font-size: 12px;
+    font-style: var(--font-style);
+    font-weight: 700;
+    line-height: var(--line-height);
+}
+.navbar-menu a:hover {
+    color: var(--color-primary)
+    opacity: 0.9;
+}
+
+main {
+    height: 800px;
+    flex-shrink: 0;
     background-image: url("ASSETS/images/headphones_hero_1.jpg");
-    background-size: cover;
-    background-position: top;
     background-repeat: no-repeat;
-  }
-  
-  .text {
-    max-width: 600px;
-  }
-  
-  h1 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  h2 {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
-  
-  p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .header {
-      flex-direction: column;
-      align-items: center;
-      padding: 10px;
-    }
-  
-    .header-logo img {
-      margin-bottom: 10px;
-    }
-  
-    .nav {
-      flex-direction: column;
-    }
-  
-    .nav-item {
-      margin-right: 0;
-      margin-bottom: 10px;
-    }
-  }
-  .hamburger {
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    top: -82px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 20px;
-    cursor: pointer;
+    justify-content: center;
+}
+.text {
+    border: 2px solid red;
+    width: 637px;
+    height: 313px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    color: var(--color-white);
+
+}
+.text h1 {
+    border: 2px solid red;
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 32px;
+    font-style: var(--font-style);
+    font-weight: 700;
+    line-height: var(--line-height);
+    padding: 0;
+    margin: 0;
+}
+.text h2 {
+    border: 2px solid red;
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: var(--font-style);
+    font-weight: 700;
+    line-height: var(--line-height);
+    position: relative;
+    top: -15px;
+}
+button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    width: 162px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 22px;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-style: var(--font-style);
+    font-weight: 700;
+    line-height: var(--line-height);
+    position: relative;
+    top: 40px;
+}
+.text p {
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: var(--font-style);
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+    position: relative;
+    top: 65px;
+}
+
+.w-6:hover {
+    color: var(--color-primary)
+    opacity: 0.9;
+}
+.small-screen {
+    display: none;
+}
+
+/* Responsive styles for mobile devices */
+
+@media (max-width: 767px) {
+
+    .small-screen {
+        display: block;
+        color: var(--color-white);
+        order: -1;
+    }
+    .navbar-menu {
+        display: none;
+    }
+    .header-logo {
+        display: none;
+    }
+    .body {
+        width: 375px;
+        height: 4860px;
+        flex-shrink: 0;
+    }
+    .header-container {
+      width: 247px;
+      display: flex;
+      width: auto;
+      height: 32px;
+      flex-shrink: 0;
+      flex-direction: row-reverse;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+      padding-left: 21px;
+      padding-right: 107px;
+    }
+
+    main {
+        width: 375px;
+        height: 869px;
+        flex-shrink: 0;
+        background-size: cover;
+        padding: 20px;
+    }
+  
+    .text {
+        width: 357px;
+        height: 436px;
+        flex-shrink: 0;
+        position: relative;
+        top: 100px;
+    }
+  
+    .text h1 {
+        width: 357px;
+        font-size: 32px;
+    }
+  
+    .text h2 {
+        width: 279px;
+        font-size: 16px;
+    }
+  
+    button {
+        width: 162px;
+        height: 44px;
+        flex-shrink: 0;
+    }
+    .text p {
+        width: 335px;
+        font-size: 16px;
+        position: relative;
+        top: 50px;
+    }
+  
+    form input,
+    form textarea {
+      width: 100%;
+    }
   }
   
-  .hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    margin: 4px 0;
-  }
   
-  /* Optional: Styling the hamburger icon when clicked/active */
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
+
+
+
+
+
+
+
   
-  .hamburger.active span:first-child {
-    transform: translateY(8px) rotate(45deg);
-  }
-  
-  .hamburger.active span:last-child {
-    transform: translateY(-8px) rotate(-45deg);
-  }
+
   
   
 
