@@ -185,7 +185,7 @@ main {
     transition: transform 5s ease;
 }
 .icon-item:hover {
-    opacity: 2;
+    transform: scale(1.1);
 }
 .frequency {
     width: 94.2px;
